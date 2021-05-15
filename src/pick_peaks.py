@@ -1,6 +1,5 @@
 #! /usr/bin/env python3
 
-
 def pick_peaks(array):
     """Finds the local peaks within the given array.
 
@@ -17,7 +16,7 @@ def pick_peaks(array):
             # edge values cannot be a peak
             continue
 
-        n_is_peak = False
+        is_peak = False
         left_value = array[i-1]
         right_value = array[i+1]
         if n <= left_value:
@@ -29,7 +28,7 @@ def pick_peaks(array):
             continue
         elif n > right_value:
             # n is a peak
-            n_is_peak = True
+            is_peak = True
         else:
             # n can be a peak, scan the remaining right hand values
             for value in array[i+2:]:
@@ -38,14 +37,14 @@ def pick_peaks(array):
                     continue
                 elif value > n:
                     # n is not a peak
-                    n_is_peak = False
+                    is_peak = False
                     break
                 else:
                     # n is a peak
-                    n_is_peak = True
+                    is_peak = True
                     break
 
-        if n_is_peak:
+        if is_peak:
             peaks['pos'].append(i)
             peaks['peaks'].append(n)
     return peaks
