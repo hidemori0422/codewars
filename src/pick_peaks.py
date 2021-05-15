@@ -64,6 +64,4 @@ def pick_peaks(array):
 
 
 if __name__ == '__main__':
-    # print(pick_peaks([1,2,3,6,4,5,2,3,2,1]))
-    print(pick_peaks([2,1,3,1,2,2,2,2])) # {"pos": [2], "peaks": [3]}
     print('Module codewars/src/pick_peaks.py')
