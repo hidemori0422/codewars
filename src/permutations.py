@@ -20,5 +20,12 @@ def permutations(string):
         return sorted(list(set(patterns)))
 
 
+# best practice
+# import itertools
+#
+# def permutations(string):
+#     return list("".join(p) for p in set(itertools.permutations(string)))
+
+
 if __name__ == '__main__':
     print('Module codewars/src/permutations.py')
